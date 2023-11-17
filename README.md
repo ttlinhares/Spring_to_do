@@ -21,6 +21,6 @@ Este projeto é uma aplicação Spring MVC que gerencia uma lista de tarefas. Em
 - 
 ## Autor e Instrutores
 - **Autor:** Thiago Linhares
-- **Instrutores:** Thyago Maia
+- **Instrutor:** Thyago Maia
 - **Curso:** Sistemas para Internet
 - **Instituição:** Unipê - 2023.2
