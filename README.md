@@ -19,7 +19,7 @@ Este projeto é uma aplicação Spring MVC que gerencia uma lista de tarefas. Em
 - CSS3 com Bootstrap 4.3.1
 - Java
 - 
-## Autor e Instrutores
+## Autor e Instrutor
 - **Autor:** Thiago Linhares
 - **Instrutor:** Thyago Maia
 - **Curso:** Sistemas para Internet
