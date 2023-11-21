@@ -51,6 +51,21 @@ public class UsuarioDAO {
             return null; 
         }
     }
+    @Transactional(readOnly=true)
+    public Long findIdByEmail(String email) {
+        
+        String jpql = "SELECT u.id FROM Usuario u WHERE u.email = :email";
+        
+        TypedQuery<Long> query = entityManager.createQuery(jpql, Long.class);
+        query.setParameter("email", email);
+ 
+
+        try {
+            return query.getSingleResult();
+        } catch (NoResultException e){
+            return null; 
+        }
+    }
 
     // Select where
     @Transactional(readOnly=true)

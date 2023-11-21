@@ -31,14 +31,14 @@
     </header>
 
     <main class="container" style="justify-content: center; display: flex; text-align: center;">
-        <form:form action="login" modelAttribute="usuario" method="GET" style="align-items: center; justify-content: center; flex-direction: column; text-align: center;">
+        <form:form action="login" modelAttribute="usuario" method="POST" style="align-items: center; justify-content: center; flex-direction: column; text-align: center;">
             
             <br>
             <div class="input-group input-group-lg">
                 <div class="input-group-prepend">
                     <span class="input-group-text">E-mail:</span>
                 </div>
-                <form:input path="email" name="email" type="text" class="form-control" />
+                <form:input path="email" name="email" placeholder="Digite seu e-mail" type="text" class="form-control" />
                 <form:errors path="email" class="text-danger" />
             </div>
             <div class="input-group input-group-lg" style="padding-top: 10px; padding-bottom: 10px;">

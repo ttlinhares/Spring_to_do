@@ -25,7 +25,6 @@
 				<form:label path="descricao">Descrição:</form:label>
 				<form:input path="descricao" type="text" class="form-control" />
 			</div>
-			<input type="hidden" path="usuarios_id" name="usuario_id" value="${usuario_id}" />
 			<div class="form-group">
 				<form:label path="dataConclusao">Data de Conclusão:</form:label>
 				<form:input path="dataConclusao" type="datetime-local"
@@ -38,6 +37,7 @@
 			</div>
 
 			<button type="submit" class="btn btn-primary">Salvar</button>
+			<a href="/todo-app/listar"></a>
 		</form:form>
 	</div>
 

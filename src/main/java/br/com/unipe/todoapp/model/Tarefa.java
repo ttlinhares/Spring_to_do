@@ -1,10 +1,11 @@
 package br.com.unipe.todoapp.model;
 
 import java.io.Serializable;
-import java.security.Timestamp;
 import java.time.LocalDateTime;
 
 import javax.persistence.*;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
 public class Tarefa implements Serializable{
@@ -16,6 +17,7 @@ public class Tarefa implements Serializable{
     private String descricao;
     
     @Column(nullable = false)
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     private LocalDateTime dataConclusao;
     
     @Column(nullable = true)
