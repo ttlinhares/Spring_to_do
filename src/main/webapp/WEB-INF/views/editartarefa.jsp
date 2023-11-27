@@ -18,12 +18,13 @@
 				<span>${mensagem}</span>
 			</div>
 		</c:if>
-		<h2>Cadastro de Tarefa</h2>
-		<form:form action="cadastratarefa" modelAttribute="tarefa" method="POST" class="mt-4">
+		<h2>Edição de Tarefa</h2>
+		<form:form action="/todo-app/editar/${tarefa.id}" modelAttribute="tarefa" method="POST" class="mt-4">
 			<div class="form-group">
 				<form:label path="descricao">Descrição da tarefa:</form:label>
 				<form:input path="descricao" type="text" class="form-control" />
 			</div>
+			
 			<div class="form-group">
 				<form:label path="dataConclusao">Data de Conclusão:</form:label>
 				<form:input path="dataConclusao" type="datetime-local"
@@ -36,11 +37,12 @@
 			</div>
 
 			<button type="submit" class="btn btn-primary">Salvar</button>
+			<a href="/todo-app/editar/${tarefa.id}"></a>
+			
 			
 		</form:form>
 		<br>
 		<a href="/todo-app/listartarefas"><button class="btn btn-primary">Voltar</button></a>
-			
 	</div>
 
 </body>

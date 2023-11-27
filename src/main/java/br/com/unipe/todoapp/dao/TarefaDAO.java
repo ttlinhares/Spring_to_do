@@ -30,10 +30,27 @@ public class TarefaDAO {
     @Transactional(readOnly=true)
     public List<Tarefa> getTarefasPorUsuario(Usuario usuario) {
         TypedQuery<Tarefa> query = entityManager.createQuery(
-            "SELECT t FROM Tarefa t WHERE t.usuario = :usuario", Tarefa.class);
+            "SELECT t FROM Tarefa t WHERE t.usuario = :usuario ORDER BY t.dataConclusao ASC", Tarefa.class);
         query.setParameter("usuario", usuario);
         return query.getResultList();
     }
+    
+    @Transactional(readOnly = true)
+    public Tarefa getbyid(Long id) {
+        TypedQuery<Tarefa> query = entityManager.createQuery(
+            "SELECT t FROM Tarefa t WHERE t.id = :id", Tarefa.class);
+        query.setParameter("id", id);
+        return query.getSingleResult();
+    }
+    
+    @Transactional
+    public Tarefa updateById(Long id, Tarefa dados) {
+        
+            entityManager.merge(dados);
+        
+            return dados;
+    }
+
     
     @Transactional(readOnly=true)
     public Tarefa getId(Long id) {
@@ -46,8 +63,8 @@ public class TarefaDAO {
     @Transactional(readOnly=false)
     public void excluir(Long id) {
         Tarefa tarefa = getId(id);
-        if (tarefa != null) {
+
             entityManager.remove(tarefa);
-        }
+
     }
 }

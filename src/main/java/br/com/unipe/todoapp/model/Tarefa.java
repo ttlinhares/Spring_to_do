@@ -39,7 +39,7 @@ public class Tarefa implements Serializable{
 
 	public Tarefa() {}
 
-	public Long getId() {
+	public Long getId(	) {
 		return id;
 	}
 
